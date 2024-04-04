@@ -81,6 +81,25 @@ void study006() {
     cout << component << "\n";
   };
   cout << endl;
+
+  cout << "root_name = " << p.root_name() << endl;
+  cout << "file_name = " << p.filename() << endl;
+  cout << "stem = " << p.stem() << endl;
+  cout << "extension = " << p.extension() << endl;
+}
+
+void study007() {
+  fs::path myPath{R"|(/home/bae/Documents/storage/nvim_copilot_error.txt)|"};
+  fs::directory_entry dirEntry{myPath};
+  if (dirEntry.exists() && dirEntry.is_regular_file()) {
+    cout << "File size = " << dirEntry.file_size() << endl;
+  }
+}
+
+void study008() {
+  fs::space_info s{fs::space("/")};
+  cout << "Capacity: " << s.capacity << endl;
+  cout << "Free: " << s.free << endl;
 }
 
 }  // namespace study13_005

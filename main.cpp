@@ -7,6 +7,6 @@
 using namespace std;
 int main(int argc, char *argv[]) {  // dd
   cout << "Program start" << endl;
-  study13_005::study006();
+  study13_005::study008();
   return 0;
 }
