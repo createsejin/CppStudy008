@@ -1,5 +1,6 @@
 #include "study13.h"
 
+#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -7,6 +8,7 @@
 #include <string>
 
 using namespace std;
+namespace fs = std::filesystem;
 
 namespace study13_005 {
 
@@ -58,6 +60,27 @@ void study004() {
 
   is >> value;
   cout << "Result after tie(): " << std::quoted(value) << "\n";
+}
+
+void study005() {
+  fs::path p1{R"|(D:\Foo\Bar)|"};
+  fs::path p2{R"|(/root/file/to)|"};
+  cout << p1 << endl;
+  cout << p2 << endl;
+}
+
+void study006() {
+  filesystem::path p{R"|(/root/Foo)|"};
+  p.append("Bar");
+  p /= "Bar2";
+  p.concat("/Foo2");
+  p += "Foo3.txt";
+  cout << p << endl;
+
+  for (const auto &component : p) {
+    cout << component << "\n";
+  };
+  cout << endl;
 }
 
 }  // namespace study13_005
