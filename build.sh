@@ -10,7 +10,7 @@ if [[ "$1" = "cb" ]]; then
   cmake --build .
 fi
 
-if [[ "$1" = "config" ]]; then
+if [[ "$1" = "config" || "$1" = "c" ]]; then
   cd build
   cmake -G Ninja -D CMAKE_LINKER=/usr/bin/lld \
     -D CMAKE_CXX_COMPILER=/usr/bin/clang++ \
@@ -19,11 +19,11 @@ if [[ "$1" = "config" ]]; then
     -D CMAKE_BUILD_TYPE=DEBUG ..
 fi
 
-if [[ "$1" = "build" ]]; then
+if [[ "$1" = "build" || "$1" = "b" ]]; then
   cd build
   cmake --build .
 fi
 
-if [[ "$1" = "run" ]]; then
+if [[ "$1" = "run" || "$1" = "r" ]]; then
   /home/bae/Projects/CppStudy008/build/CppStudy008
 fi
