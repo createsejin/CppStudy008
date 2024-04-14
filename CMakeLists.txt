@@ -7,6 +7,7 @@ enable_testing()
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED)
 set(CMAKE_TOOLCHAIN_FILE /home/bae/vcpkg/scripts/buildsystems/vcpkg.cmake)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -stdlib=libc++")
 # set(CMAKE_PREFIX_PATH /home/bae/vcpkg/packages/fmt_x64-linux/share/fmt)
 # include_directories(/home/bae/vcpkg/packages/fmt_x64-linux/include)
 
