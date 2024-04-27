@@ -16,6 +16,8 @@ find_package(fmt CONFIG REQUIRED)
 add_executable(CppStudy008 main.cpp
   study/study13.h
   study/study13.cpp
+  study/effect001.h
+  study/effect001.cpp
 )
 
 target_link_libraries(CppStudy008 PRIVATE fmt::fmt-header-only)

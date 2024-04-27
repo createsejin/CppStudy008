@@ -1,3 +1,5 @@
+#pragma once
+
 namespace study13_005 {
 void study001();
 void study002();
